@@ -13,23 +13,48 @@ const navItems = [
 const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true); // Navbar visible or hidden
+  const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Ref untuk mobile nav height animasi
   const mobileNavRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Handle scroll event
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      // Clear timer kalau ada scroll baru
+      if (hideTimeoutRef.current) {
+        clearTimeout(hideTimeoutRef.current);
       }
+
+      const currentScrollY = window.scrollY;
+
+      // Set scrolled true jika scroll lebih dari 100px (untuk styling)
+      setScrolled(currentScrollY > 100);
+
+      // Jika posisi scroll di atas, navbar selalu ditampilkan
+      if (currentScrollY === 0) {
+        setShowNavbar(true);
+        return;
+      }
+
+      // Kalau scroll di bawah top, navbar muncul saat scroll
+      setShowNavbar(true);
+
+      // Set timer 2 detik untuk sembunyikan navbar kalau scroll berhenti
+      hideTimeoutRef.current = setTimeout(() => {
+        setShowNavbar(false);
+      }, 2000);
     };
 
     window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
+    };
   }, []);
 
+  // Handle animasi maxHeight dan opacity untuk mobile nav
   useEffect(() => {
     const el = mobileNavRef.current;
     if (el) {
@@ -45,10 +70,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-500 ease-in-out font-judson ${
-        scrolled
-          ? 'md:bg-black/10 backdrop-blur-xs'
-          : ''
+      className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-in-out font-judson ${
+        showNavbar ? 'translate-y-0' : '-translate-y-full'
+      } ${
+        scrolled ? 'md:bg-black/10 backdrop-blur-xs' : ''
       }`}
     >
       <div className={`${scrolled ? 'md:bg-black/40' : 'bg-black/0'} transition-colors duration-500`}>
