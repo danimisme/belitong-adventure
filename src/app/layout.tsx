@@ -43,7 +43,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
-        <div className="h-[100vh]"></div>
+        <div className="h-[100vh] bg-white"></div>
       </body>
     </html>
   );

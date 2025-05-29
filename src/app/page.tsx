@@ -1,11 +1,9 @@
-import HeroImage from "./components/Fragments/HeroImage";
-
+import ParalaxImage from "./components/Fragments/ParalaxImage";
 import "./globals.css";
-
 export default function Home() {
   return (
     <>
-      <HeroImage imgSrc="/assets/images/hero-img.png" imgAlt="Belitong Island">
+      <ParalaxImage imgSrc="/assets/images/hero-img.png" imgAlt="Belitong Island">
         <div className="grid grid-cols-2 h-full">
           <div className="flex flex-col justify-evenly items-start h-full py-8 md:py-16 lg:py-20">
             <h1 className="font-italiana text-[58px] text-white relative leading-[1.2]">
@@ -19,7 +17,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </HeroImage>
+      </ParalaxImage>
     </>
   );
 }
