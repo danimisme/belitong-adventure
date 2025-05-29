@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Italiana } from "next/font/google";
+import { Geist, Geist_Mono, Italiana, Judson } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Layouts/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +25,12 @@ const italiana = Italiana({
   variable: "--font-italiana",
 });
 
+const judson = Judson({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-judson",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,9 +39,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${italiana.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${italiana.variable} ${judson.variable} antialiased`}
       >
+        <Navbar />
         {children}
+        <div className="h-[100vh]"></div>
       </body>
     </html>
   );
