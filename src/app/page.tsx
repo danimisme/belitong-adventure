@@ -1,4 +1,5 @@
 import ParalaxImage from "./components/Fragments/ParalaxImage";
+import Section1 from "./components/Section/Section1";
 import "./globals.css";
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           </div>
         </div>
       </ParalaxImage>
+      <Section1 />
     </>
   );
 }
