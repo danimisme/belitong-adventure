@@ -56,7 +56,7 @@ export default function Section1() {
 
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full overflow-x-hidden ">
       <section
         className="min-h-screen flex flex-nowrap items-center space-x-10 px-20"
         ref={imageContainerRef}
