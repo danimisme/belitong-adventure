@@ -96,7 +96,7 @@ export default function HomeCarousel() {
  const HeroImage1 = ({title, desc, action, imgSrc, imgAlt} : ImgProps) => {
   return (
     <HeroImage imgSrc={imgSrc} imgAlt={imgAlt}>
-      <div className="grid grid-cols-2 h-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 h-full">
         <div className="flex flex-col justify-evenly items-start h-full py-8 md:py-16 lg:py-20">
           <h1 className="font-italiana text-[58px] text-white relative leading-[1.2]">
             {title}
@@ -114,7 +114,7 @@ export default function HomeCarousel() {
 const HeroImage2 = ({title, desc, action, imgSrc, imgAlt} : ImgProps) => {
   return (
      <HeroImage imgSrc={imgSrc} imgAlt={imgAlt}>
-          <div className="grid grid-cols-2 h-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 py-12 md:py-0 h-full">
             <div className="col-start-2 flex flex-col justify-end items-center gap-12 h-full py-8 md:py-16 lg:py-20">
               <ActionButton text={action.text} linkTo={action.linkTo} />
               <h1 className="font-italiana text-center text-[58px] text-white relative leading-[1.2]">
@@ -132,7 +132,7 @@ const HeroImage2 = ({title, desc, action, imgSrc, imgAlt} : ImgProps) => {
 const HeroImage3 = ({title, desc, action, imgSrc, imgAlt}: ImgProps) => {
    return (
     <HeroImage imgSrc={imgSrc} imgAlt={imgAlt}>
-        <div className="grid grid-cols-2 h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 h-full">
           <div className="flex flex-col justify-evenly items-start h-full py-8 md:py-16 lg:py-20">
             <h1 className="font-italiana text-[58px] text-white relative leading-[1.2]">
               {title}
@@ -150,7 +150,7 @@ const HeroImage3 = ({title, desc, action, imgSrc, imgAlt}: ImgProps) => {
 const HeroImage4 = ({title, desc, action, imgSrc, imgAlt}: ImgProps) => {
   return (
     <HeroImage imgSrc={imgSrc} imgAlt={imgAlt}>
-          <div className="grid grid-cols-1 h-full">
+          <div className="grid grid-cols-1 py-16 md:py-0 h-full">
             <div className="flex flex-col justify-between items-center h-full py-8 md:py-16 lg:py-20 max-w-3xl mx-auto">
               <div className="flex flex-col items-center gap-8">
                   <h1 className="font-italiana text-[58px] text-white relative leading-[1.2] text-center">
