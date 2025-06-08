@@ -78,7 +78,7 @@ const Navbar = () => {
     >
       <div className={`${scrolled ? 'md:bg-black/40' : 'bg-black/0'} transition-colors duration-500`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 bg-black/40 backdrop-blur-xs md:backdrop-blur-none md:bg-transparent">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16">
             {/* Logo mobile (kiri) */}
             <div className="md:hidden text-white text-2xl font-serif ">LOGO</div>
 
