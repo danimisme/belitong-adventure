@@ -19,11 +19,12 @@ const titles = [
   "Walk ancient paths.",
   "Dive into hidden stories.",
   "Belitong`s magic awaits.",
-]
+];
 
 export default function ParallaxStack() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const imageRefs = useRef<HTMLDivElement[]>([]);
+  const titleRefs = useRef<HTMLSpanElement[]>([]);
 
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -35,29 +36,63 @@ export default function ParallaxStack() {
         end: `+=${(images.length - 1) * 1000}`,
         scrub: 0.4,
         pin: true,
-        
       },
     });
 
-  imageRefs.current.forEach((el, i) => {
-  if (i === 0) {
-    // Atur posisi gambar pertama langsung tampil
-    gsap.set(el, {
-      y: 0,
-      x: 0,
-      opacity: 1,
+    imageRefs.current.forEach((el, i) => {
+      if (i === 0) {
+        gsap.set(el, {
+          y: 0,
+          x: 0,
+          opacity: 1,
+        });
+      } else {
+        tl.fromTo(
+          el,
+          { y: 1000, x: 0 + i * 50 },
+          { y: 0 + i * 50, opacity: 1, duration: 2, ease: "none" },
+          (i - 1) * 1.5
+        );
+      }
     });
-  } else {
-    // Gambar kedua dan seterusnya dianimasikan saat scroll
-    tl.fromTo(
-      el,
-      { y: 1000, x: 0 + i * 50 },
-      { y: 0 + i * 50, opacity: 1, duration: 2, ease: "none" },
-      (i - 1) * 1.5 
-    );
-  }
-});
 
+    // Title animation
+    titleRefs.current.forEach((title, titleIndex) => {
+      if (title) {
+        const letters = title.textContent ? [...title.textContent] : [];
+        title.textContent = ""; // Clear the original text
+
+        letters.forEach((letter, index) => {
+          const letterSpan = document.createElement("span");
+          letterSpan.textContent = letter;
+          letterSpan.style.display = "inline-block"; // Ensure letters are side by side
+          if (letter === " ") {
+            letterSpan.innerHTML = "&nbsp;"; // Preserve spaces
+          }
+          title.appendChild(letterSpan);
+
+          tl.fromTo(
+            letterSpan,
+            {
+              fontWeight: 800, // Final state: bold font weight
+              y:index % 2 == 0 ? -100 : 100, // Alternate up and down
+              x: 100 + titleIndex * 50, // Start from the right
+              opacity: 0,
+            },
+            {
+              fontWeight: 800, // Final state: bold font weight
+              y: 0, // Move to original position
+              x: 0,
+              duration: 0.3, // Shorten the duration
+              delay: index * 0.05, // Reduce the delay
+              ease: "power1.inOut",
+              opacity: 1,
+            },
+            (images.length - 3 + titleIndex) * 1.5 // Adjust the start time
+          );
+        });
+      }
+    });
 
     return () => {
       tl.kill();
@@ -75,12 +110,17 @@ export default function ParallaxStack() {
         <p className="mt-2">Majestic granite shapes the horizon</p>
         {titles.map((title, i) => (
           <h2 key={i} className="text-4xl font-italiana mt-4">
-            {title}
+            <span
+              ref={(el) => {
+                if (el) titleRefs.current[i] = el;
+              }}
+            >
+              {title}
+            </span>
           </h2>
         ))}
-        <Link href={"#"} className="flex items-center gap-2 mt-4" >
-          Let the journey begin <FaArrowDown className="animate-bounce"/>
-
+        <Link href={"#"} className="flex items-center gap-2 mt-4">
+          Let the journey begin <FaArrowDown className="animate-bounce" />
         </Link>
       </div>
       <div className="mt-20 flex items-start justify-start">

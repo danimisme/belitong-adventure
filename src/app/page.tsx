@@ -1,12 +1,14 @@
 import HomeCarousel from "./components/Carousels/HomeCarousel";
-import ParalaxImage from "./components/Fragments/ParalaxImage";
+// import ParalaxImage from "./components/Fragments/ParalaxImage";
+import ParallaxStack from "./components/Section/ParallaxStack";
 
 export default function Home() {
   return (
     <>
       <HomeCarousel />
-      <ParalaxImage imgSrc="/assets/images/hero-img.png" />
-      
+      <ParallaxStack />
+      {/* <ParalaxImage imgSrc="/assets/images/hero-img.png" /> */}
+      <div className="h-[100vh]"></div>
     </>
   );
 }
