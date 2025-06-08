@@ -1,0 +1,13 @@
+@keyframes zoomAndPan {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(10px, 10px); /* zoom dan geser sedikit */
+  }
+}
+
+.hero-zoom {
+  animation: zoomAndPan 20s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
