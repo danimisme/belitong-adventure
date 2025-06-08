@@ -5,9 +5,10 @@ import { FaLocationDot } from "react-icons/fa6";
 export default function Footer() {
 
   return (
-    <footer id="contact" className="w-full pb-14 pt-24 bg-white dark:bg-slate-900">
+    <footer id="contact" className="w-full pb-14 bg-white dark:bg-slate-900">
       <div className="container">
-        <div className="border-b border-gray-200 pb-14 flex justify-between items-center flex-col gap-8 lg:gap-0 lg:flex-row">
+
+        {/* <div className="border-b border-gray-200 pb-14 flex justify-between items-center flex-col gap-8 lg:gap-0 lg:flex-row">
           <div className="block">
             <h3 className="font-manrope text-3xl text-gray-900 font-bold mb-2 text-center lg:text-left dark:text-white">
               Berlangganan news letter kami
@@ -28,7 +29,8 @@ export default function Footer() {
               Berlangganan
             </button>
           </div>
-        </div>
+        </div> */}
+
         {/* <!--Grid--> */}
         <div className="grid grid-cols-2 min-[690px]:grid-cols-4 lg:grid-cols-6 gap-4 xl:gap-8 pt-14 pb-10 max-w-xs mx-auto min-[690px]:max-w-2xl lg:max-w-full">
           <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
