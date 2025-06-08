@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Italiana, Judson } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Italiana, Judson } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Layouts/Navbar";
 import Footer from "./components/Layouts/Footer";
@@ -32,6 +32,12 @@ const judson = Judson({
   variable: "--font-judson",
 });
 
+const inter = Inter({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -40,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${italiana.variable} ${judson.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${italiana.variable} ${judson.variable} ${inter.variable} antialiased`}
       >
         <Navbar />
         {children}
