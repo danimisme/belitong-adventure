@@ -103,7 +103,7 @@ export default function HomeCarousel() {
       <AliceCarousel
         autoPlay
         animationType="fadeout"
-        autoPlayInterval={1000}
+        autoPlayInterval={5000}
         infinite
         disableButtonsControls
         disableDotsControls
