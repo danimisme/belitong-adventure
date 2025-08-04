@@ -73,11 +73,11 @@ const Navbar = () => {
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ease-in-out font-judson ${
         showNavbar ? 'translate-y-0' : '-translate-y-full'
       } ${
-        scrolled ? 'md:bg-black/10 backdrop-blur-xs' : ''
+        scrolled ? 'md:bg-primary/80 backdrop-blur-xs' : ''
       }`}
     >
-      <div className={`${scrolled ? 'md:bg-black/40' : 'bg-black/0'} transition-colors duration-500`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 bg-black/40 backdrop-blur-xs md:backdrop-blur-none md:bg-transparent">
+      <div className={`${scrolled ? 'md:bg-primary/80' : 'bg-primary/0'} transition-colors duration-500`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 bg-primary/80 backdrop-blur-xs md:backdrop-blur-none md:bg-transparent">
           <div className="flex items-center justify-between h-16">
             {/* Logo mobile (kiri) */}
             <div className="md:hidden text-white text-2xl font-serif ">LOGO</div>
@@ -130,13 +130,13 @@ const Navbar = () => {
         {/* Mobile nav dengan animasi */}
         <div
           ref={mobileNavRef}
-          className="md:hidden bg-black/40 backdrop-blur-xs px-4 pb-4 overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out"
+          className="md:hidden bg-primary/80 backdrop-blur-xs px-4 pb-4 overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out"
         >
           {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="block text-white py-2 border-b border-gray-600"
+              className="block text-white py-2 border-white border-b hover:text-blue-300 w-fit"
               onClick={() => setIsMobileOpen(false)}
             >
               {item.label}
