@@ -32,7 +32,7 @@ export default function ParallaxStack() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "top top",
+        start: "bottom bottom",
         end: `+=${(images.length - 1) * 1000}`,
         scrub: 0.4,
         pin: true,
