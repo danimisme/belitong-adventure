@@ -116,7 +116,6 @@ export default function HomeCarousel() {
           1920: { items: 1 },
         }}
       />
-      <HeroImage3 {...data[2]} />
     </>
   );
 }
