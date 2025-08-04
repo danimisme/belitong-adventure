@@ -32,8 +32,8 @@ export default function Packages() {
             width: '200vw'
           }}
         >
-          <div className="jage-bumi w-[100vw] container mx-auto flex justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-24 lg:gap-32 px-4 justify-items-center">
+          <div className="jage-bumi w-[100vw] md:container mx-auto flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-24 lg:gap-32 md:px-4 justify-items-center">
             {jageBumiData.map((packageItem) => (
               <PackageCard
                 key={packageItem.id}
@@ -43,7 +43,7 @@ export default function Packages() {
             ))}
           </div>
           </div>
-          <div className="jage-laut w-[100vw] container mx-auto flex justify-center">
+          <div className="jage-laut w-[100vw] md:container mx-auto flex justify-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-24 lg:gap-32 px-4 justify-items-center">
             {jageLautData.map((packageItem) => (
               <PackageCard
