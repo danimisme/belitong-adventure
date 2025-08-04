@@ -103,13 +103,13 @@ export default function ParallaxStack() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[100vh] container grid grid-cols-2 justify-center overflow-hidden"
+      className="md:relative h-[100vh] container grid grid-cols-1 md:grid-cols-2 justify-center overflow-hidden"
     >
-      <div className="flex flex-col justify-center">
-        <h2 className="text-3xl font-italiana">Unlock the Wonders of Belitong</h2>
-        <p className="mt-2">Majestic granite shapes the horizon</p>
+      <div className="flex flex-col justify-center text-center md:text-left md:py-0 py-4">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-italiana mb-2">Unlock the Wonders of Belitong</h2>
+        <p className="mt-1 mb-2">Majestic granite shapes the horizon</p>
         {titles.map((title, i) => (
-          <h2 key={i} className="text-4xl font-italiana mt-4">
+          <h2 key={i} className="text-xl md:text-2xl lg:text-4xl font-italiana mt-2 mb-2">
             <span
               ref={(el) => {
                 if (el) titleRefs.current[i] = el;
@@ -119,18 +119,18 @@ export default function ParallaxStack() {
             </span>
           </h2>
         ))}
-        <Link href={"#"} className="flex items-center gap-2 mt-4">
+        <Link href={"#"} className="flex items-center gap-2 mt-4 justify-center md:justify-start">
           Let the journey begin <FaArrowDown className="animate-bounce" />
         </Link>
       </div>
-      <div className="mt-20 flex items-start justify-start">
+      <div className="md:mt-10 flex items-center justify-center md:justify-start">
         {images.map((src, i) => (
           <div
             key={i}
             ref={(el) => {
               if (el) imageRefs.current[i] = el;
             }}
-            className="absolute w-[40%] aspect-square shadow-lg overflow-hidden"
+            className="absolute w-[80%] md:w-[40%] aspect-square shadow-lg overflow-hidden"
             style={{ zIndex: i + 1 }}
           >
             <Image
