@@ -1,10 +1,16 @@
 'use client';
 
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaPaperPlane } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
+import ContactForm from '../Forms/ContactForm';
+
+const PHONE_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER 
+const EMAIL_ADDRESS = process.env.NEXT_PUBLIC_EMAIL_ADDRESS
+
 export default function ContactUs() {
   return (
-    <section className="container mx-auto py-16">
-      <div className="text-center mb-12">
+    <section className=" py-16 bg-gray-100">
+      <div className='container mx-auto'>
+              <div className="text-center mb-12">
         <h2 className="text-3xl font-extrabold mb-2">Contact Us</h2>
         <p className="text-lg text-gray-600">Have questions or need more information? Get in touch with our team.</p>
       </div>
@@ -13,35 +19,7 @@ export default function ContactUs() {
         {/* Send Message Form */}
         <div className="border border-primary rounded-lg p-8">
           <h3 className="text-xl font-extrabold mb-6">Send us a Message</h3>
-          <form className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block mb-1 font-medium">Full Name</label>
-                <input type="text" className="w-full border rounded px-3 py-2 focus:outline-none" />
-              </div>
-              <div>
-                <label className="block mb-1 font-medium">Email Address</label>
-                <input type="email" className="w-full border rounded px-3 py-2 focus:outline-none" />
-              </div>
-            </div>
-
-            <div>
-              <label className="block mb-1 font-medium">Subject</label>
-              <input type="text" className="w-full border rounded px-3 py-2 focus:outline-none" />
-            </div>
-
-            <div>
-              <label className="block mb-1 font-medium">Message</label>
-              <textarea rows={5} className="w-full border rounded px-3 py-2 focus:outline-none"></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="flex items-center gap-2 bg-primary hover:bg-teal-700 text-white px-6 py-2 rounded"
-            >
-              <FaPaperPlane /> Send Message
-            </button>
-          </form>
+          <ContactForm />
         </div>
 
         {/* Contact Information */}
@@ -61,7 +39,7 @@ export default function ContactUs() {
               <FaPhoneAlt className="text-primary w-12 h-12 p-3 bg-[#4D918F]/35 rounded-full" />
               <div>
                 <h4 className="font-bold">Phone</h4>
-                <p>+62 821 7832 4818</p>
+                <p>{PHONE_NUMBER ? `+${PHONE_NUMBER}` : 'Unavailable'}</p>
               </div>
             </div>
 
@@ -69,7 +47,7 @@ export default function ContactUs() {
               <FaEnvelope className="text-primary w-12 h-12 p-3 bg-[#4D918F]/35 rounded-full" />
               <div>
                 <h4 className="font-bold">Email</h4>
-                <p>zahfir1000@gmail.com</p>
+                <p>{EMAIL_ADDRESS}</p>
               </div>
             </div>
 
@@ -83,6 +61,7 @@ export default function ContactUs() {
 
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
