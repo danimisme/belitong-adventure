@@ -1,5 +1,10 @@
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaMapMarkerAlt } from 'react-icons/fa';
 
+const FACEBOOK_LINK = process.env.NEXT_PUBLIC_FACEBOOK_LINK;
+const INSTAGRAM_LINK = process.env.NEXT_PUBLIC_INSTAGRAM_LINK;
+const TWITTER_LINK = process.env.NEXT_PUBLIC_TWITTER_LINK;
+const YOUTUBE_LINK = process.env.NEXT_PUBLIC_YOUTUBE_LINK;
+
 export default function Footer() {
   return (
     <footer className="bg-primary text-white py-12">
@@ -12,16 +17,16 @@ export default function Footer() {
               Experience unforgettable boat voyages around the beautiful Belitong Island.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-gray-300">
+              <a href={FACEBOOK_LINK} className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF size={20} />
               </a>
-              <a href="#" className="hover:text-gray-300">
+              <a href={INSTAGRAM_LINK} className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
                 <FaInstagram size={20} />
               </a>
-              <a href="#" className="hover:text-gray-300">
+              <a href={TWITTER_LINK} className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
                 <FaTwitter size={20} />
               </a>
-              <a href="#" className="hover:text-gray-300">
+              <a href={YOUTUBE_LINK} className="hover:text-gray-300" target="_blank" rel="noopener noreferrer">
                 <FaYoutube size={20} />
               </a>
             </div>
