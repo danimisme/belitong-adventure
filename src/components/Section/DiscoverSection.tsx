@@ -26,7 +26,7 @@ export default function DiscoverSection() {
               <h3 className="text-xl font-semibold">{article.title}</h3>
               <p className="text-gray-600">{article.content}</p>
               <div>
-                <a href="#" className="bg-primary text-sm text-white py-2 px-4 rounded-lg">Read More</a>
+                <a href={`articles/${article.slug}`} className="bg-primary text-sm text-white py-2 px-4 rounded-lg">Read More</a>
               </div>
             </div>
           </div>

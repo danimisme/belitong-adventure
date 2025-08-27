@@ -2,9 +2,10 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navItems = [
-  { label: 'HOME', href: '#' },
+  { label: 'HOME', href: '/#home' },
   { label: 'VOYAGES', href: '#' },
   { label: 'JAGE LAUT', href: '#jage' },
   { label: 'CONTACT US', href: '#contact' },
@@ -16,43 +17,45 @@ const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true); // Navbar visible or hidden
   const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Ref untuk mobile nav height animasi
   const mobileNavRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (pathname.startsWith('/articles/')) {
+      setShowNavbar(true);
+      setScrolled(true);
+    } else {
+      setShowNavbar(true);
+      setScrolled(false);
+    }
+  },[pathname])
 
   useEffect(() => {
     const handleScroll = () => {
-      // Clear timer kalau ada scroll baru
       if (hideTimeoutRef.current) {
         clearTimeout(hideTimeoutRef.current);
       }
-
       const currentScrollY = window.scrollY;
-
-      // Set scrolled true jika scroll lebih dari 100px (untuk styling)
       setScrolled(currentScrollY > 100);
-
-      // Jika posisi scroll di atas, navbar selalu ditampilkan
       if (currentScrollY === 0) {
         setShowNavbar(true);
         return;
       }
-
-      // Kalau scroll di bawah top, navbar muncul saat scroll
       setShowNavbar(true);
-
-      // Set timer 2 detik untuk sembunyikan navbar kalau scroll berhenti
       hideTimeoutRef.current = setTimeout(() => {
         setShowNavbar(false);
       }, 2000);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    if (!pathname.startsWith('/articles')) {
+      window.addEventListener('scroll', handleScroll);
+    }
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
       if (hideTimeoutRef.current) clearTimeout(hideTimeoutRef.current);
     };
-  }, []);
+  }, [pathname]);
 
   // Handle animasi maxHeight dan opacity untuk mobile nav
   useEffect(() => {
@@ -133,14 +136,14 @@ const Navbar = () => {
           className="md:hidden bg-primary/80 backdrop-blur-xs px-4 pb-4 overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out"
         >
           {navItems.map((item) => (
-            <Link
+            <a
               key={item.label}
               href={item.href}
               className="block text-white py-2 border-white border-b hover:text-blue-300 w-fit"
               onClick={() => setIsMobileOpen(false)}
             >
               {item.label}
-            </Link>
+            </a>
           ))}
         </div>
       </div>

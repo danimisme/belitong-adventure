@@ -99,7 +99,7 @@ export default function HomeCarousel() {
     }
   });
   return (
-    <>
+    <section id="home">
       <AliceCarousel
         autoPlay
         animationType="fadeout"
@@ -116,7 +116,7 @@ export default function HomeCarousel() {
           1920: { items: 1 },
         }}
       />
-    </>
+    </section>
   );
 }
 const HeroImage1 = ({ title, desc, action, imgSrc, imgAlt }: ImgProps) => {
