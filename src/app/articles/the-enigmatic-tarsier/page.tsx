@@ -28,7 +28,7 @@ export default function TheEnigmaticTarsier() {
         <hr className="my-2 md:my-6 lg:my-8" />
         <p>
           Tarsiers possess a range of fascinating adaptations that help them
-          thrive in their forested habitats. Their name, "tarsier," comes from
+          thrive in their forested habitats. Their name, &quot;tarsier,&quot; comes from
           their incredibly elongated <b>tarsus bones</b> (ankle bones), which
           allow them to leap impressive distances between trees-up to 5 meters
           (16 feet)!
@@ -37,8 +37,7 @@ export default function TheEnigmaticTarsier() {
           <li>
             <b>Massive Eyes:</b> Each eyeball is about 16 mm in diameter and is
             as large as its entire brain. Unlike most animals, their eyes cannot
-            rotate; instead, a special adaptation allows their head to turn{" "}
-            <b>180 degrees</b> in each direction.
+            rotate; instead, a special adaptation allows their head to turn <b>180 degrees</b> in each direction.
           </li>
           <li>
             <b>Carnivorous Diet:</b> Tarsiers are the only entirely carnivorous
