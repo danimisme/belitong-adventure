@@ -5,11 +5,13 @@ interface HeroImageProps {
   children?: React.ReactNode;
   imgSrc: string;
   imgAlt?: string;
+  overlayColor?: string;
 }
 
-export default function HeroImage({ children, imgSrc, imgAlt }: HeroImageProps) {
+export default function HeroImage({ children, imgSrc, imgAlt, overlayColor }: HeroImageProps) {
   return (
     <div className="relative w-full h-[100vh] overflow-hidden">
+      <div className={`absolute inset-0 ${overlayColor} z-1`}></div>
       <Image
         src={imgSrc}
         alt={imgAlt || "Hero Image"}

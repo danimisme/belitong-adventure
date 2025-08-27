@@ -3,9 +3,10 @@ import Image from "next/image"
 export const articles = [
   {
     id: 1,
-    title: "The Tarsius: Belitong’s Tiny Primate",
-    content: "BLearn about the rare and unique Tarsius, one of the world’s smallest primates that can be found in the forests of Belitong Island.",
-    imageUrl: "/assets/images/articles/article-1.png",
+    slug: "the-enigmatic-tarsier",
+    title: "The Enigmatic Tarsier",
+    content: "Learn about the rare and unique Tarsier, one of the world’s smallest primates that can be found in the forests of Belitong Island.",
+    imageUrl: "/assets/images/articles/tarsier.png",
   },
 ]
 

@@ -8,7 +8,7 @@ const EMAIL_ADDRESS = process.env.NEXT_PUBLIC_EMAIL_ADDRESS
 
 export default function ContactUs() {
   return (
-    <section className=" py-16 bg-gray-100">
+    <section className=" py-16 bg-gray-100" id="contact">
       <div className='container mx-auto'>
               <div className="text-center mb-12">
         <h2 className="text-3xl font-extrabold mb-2">Contact Us</h2>

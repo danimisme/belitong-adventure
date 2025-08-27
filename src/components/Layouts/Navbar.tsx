@@ -6,8 +6,8 @@ import Link from 'next/link';
 const navItems = [
   { label: 'HOME', href: '#' },
   { label: 'VOYAGES', href: '#' },
-  { label: 'JAGE LAUT', href: '#' },
-  { label: 'CONTACT US', href: '#' },
+  { label: 'JAGE LAUT', href: '#jage' },
+  { label: 'CONTACT US', href: '#contact' },
 ];
 
 const Navbar = () => {

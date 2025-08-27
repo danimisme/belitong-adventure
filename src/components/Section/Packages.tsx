@@ -9,7 +9,7 @@ import "./Packages.css";
 export default function Packages() {
   const [isJageLautVisible, setIsJageLautVisible] = useState(true);
   return (
-    <div className="packages-section md:h-[100vh]">
+    <section className="packages-section md:h-[100vh]" id="jage">
       <div className="container flex flex-col items-center justify-center md:text-center mt-24">
         <h2 className="text-2xl font-extrabold lg:mb-6 mb-4">
           Featured Advanture Packages
@@ -56,6 +56,6 @@ export default function Packages() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

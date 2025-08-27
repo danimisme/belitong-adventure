@@ -125,13 +125,13 @@ const HeroImage1 = ({ title, desc, action, imgSrc, imgAlt }: ImgProps) => {
       <div className="grid grid-cols-1 h-full">
         <div className="flex flex-col justify-evenly items-start h-full py-8 md:py-16 lg:py-20 md-w-[70%]">
           <h1 className="font-italiana text-[58px] text-white relative leading-[1.2] md:w-[50%]"
-           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>
+           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}>
             {title}
           </h1>
           <ActionButton text={action.text} linkTo={action.linkTo} />
           <div className="md:flex md:justify-start md:w-[70%]">
             <p className="mt-10 text-white text-lg"
-            style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>{desc}</p>
+            style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}>{desc}</p>
           </div>
         </div>
       </div>
@@ -141,12 +141,12 @@ const HeroImage1 = ({ title, desc, action, imgSrc, imgAlt }: ImgProps) => {
 
 const HeroImage2 = ({ title, desc, action, imgSrc, imgAlt }: ImgProps) => {
   return (
-    <HeroImage imgSrc={imgSrc} imgAlt={imgAlt}>
+    <HeroImage imgSrc={imgSrc} imgAlt={imgAlt} overlayColor="bg-black/25">
       <div className="grid grid-cols-1 md:grid-cols-2 py-12 md:py-0 h-full">
         <div className="col-span-2 flex flex-col justify-end gap-12 h-full py-8 md:py-16 lg:py-20">
           <div className="md:flex md:w-[60%] md:justify-start">
             <h1 className="font-italiana text-center text-[58px] text-white relative leading-[1.2]"
-             style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>
+             style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}>
               {title}
             </h1>
           </div>
@@ -157,7 +157,7 @@ const HeroImage2 = ({ title, desc, action, imgSrc, imgAlt }: ImgProps) => {
           </div>
           <div className="md:flex w-full md:justify-end">
             <p className="text-white text-lg text-center md:w-[70%]"
-             style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>{desc}</p>
+             style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}>{desc}</p>
           </div>
         </div>
       </div>
@@ -167,15 +167,15 @@ const HeroImage2 = ({ title, desc, action, imgSrc, imgAlt }: ImgProps) => {
 
 const HeroImage3 = ({ title, desc, action, imgSrc, imgAlt }: ImgProps) => {
   return (
-    <HeroImage imgSrc={imgSrc} imgAlt={imgAlt}>
+    <HeroImage imgSrc={imgSrc} imgAlt={imgAlt} overlayColor="bg-black/20">
       <div className="flex flex-col h-full">
         <div className="flex flex-col items-start h-full md:py-16 py-20">
           <h1 className="font-italiana text-[58px] text-white relative leading-[1.2] max-w-5xl"
-           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>
+           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}>
             {title}
           </h1>
           <p className="text-white text-lg max-w-6xl mt-20 md:mt-8"
-           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>{desc}</p>
+           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}>{desc}</p>
           <div className="md:w-xl flex justify-center mt-32">
             <ActionButton text={action.text} linkTo={action.linkTo} />
           </div>
@@ -187,13 +187,13 @@ const HeroImage3 = ({ title, desc, action, imgSrc, imgAlt }: ImgProps) => {
 
 const HeroImage4 = ({ title, desc, action, imgSrc, imgAlt }: ImgProps) => {
   return (
-    <HeroImage imgSrc={imgSrc} imgAlt={imgAlt}>
+    <HeroImage imgSrc={imgSrc} imgAlt={imgAlt} overlayColor="bg-black/35">
       <div className="grid grid-cols-1 py-16 md:py-0 h-full">
         <div className="flex flex-col justify-between w-full h-full py-8 md:py-16 lg:py-20">
             <div className="flex flex-col items-center gap-24 max-w-4xl">
               <h1
               className="font-italiana text-[58px] text-white text-shadow-black relative leading-[1.2] text-center"
-              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}
             >
               {title}
             </h1>
@@ -203,7 +203,7 @@ const HeroImage4 = ({ title, desc, action, imgSrc, imgAlt }: ImgProps) => {
             <div className="w-full flex justify-end mt-8">
               <p
               className="text-white text-lg text-center max-w-2xl"
-              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
+              style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}
             >
               {desc}
             </p>
@@ -221,11 +221,11 @@ const HeroImage5 = ({title, desc, action, imgSrc, imgAlt} : ImgProps) => {
             <div className="col-start-2 flex flex-col justify-end items-center gap-12 h-full py-8 md:py-16 lg:py-20">
               <ActionButton text={action.text} linkTo={action.linkTo} />
               <h1 className="font-italiana text-center text-[58px] text-white relative leading-[1.2]"
-               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>
+               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}>
                 {title}
               </h1>
               <p className="text-white text-lg text-center"
-               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>
+               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}>
                 {desc}
               </p>
             </div>
@@ -236,11 +236,11 @@ const HeroImage5 = ({title, desc, action, imgSrc, imgAlt} : ImgProps) => {
 
 const HeroImage6 = ({ title, desc, action, imgSrc, imgAlt }: ImgProps) => {
   return (
-    <HeroImage imgSrc={imgSrc} imgAlt={imgAlt}>
+    <HeroImage imgSrc={imgSrc} imgAlt={imgAlt} overlayColor="bg-black/30">
       <div className="flex flex-col h-full">
         <div className="flex flex-col items-start justify-between h-full pt-8 md:pt-16 lg:pt-20">
           <h1 className="font-italiana text-[58px] text-white relative leading-[1.2] max-w-4xl md:text-center"
-           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>
+           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}>
             {title}
           </h1>
             <div className="flex flex-col items-center w-full gap-24 max-w-3xl mt-24">
@@ -248,7 +248,9 @@ const HeroImage6 = ({ title, desc, action, imgSrc, imgAlt }: ImgProps) => {
             </div>
 
           <div className="flex justify-end w-full mt-32 mb-24">
-            <p className="text-white text-lg max-w-3xl mt-20 md:mt-0">{desc}</p>
+            <p className="text-white text-lg max-w-3xl mt-20 md:mt-0"
+               style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}
+            >{desc}</p>
 
           </div>
         </div>
