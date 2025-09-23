@@ -381,6 +381,11 @@
   resolved "https://registry.yarnpkg.com/@nolyfill/is-core-module/-/is-core-module-1.0.39.tgz#3dc35ba0f1e66b403c00b39344f870298ebb1c8e"
   integrity sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==
 
+"@reimujs/aos@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@reimujs/aos/-/aos-0.1.2.tgz#3bfc71d5828b747db4fc3eb624db13ddb0842b8c"
+  integrity sha512-CPhZy7sTyeUFA9lnQL0PhGgbMpmNUbOFSLHUoaWXE5ei3GVuGBeMcq1HjYhMme3Zu7n5KPKJ7ndb9NESZ7jm6g==
+
 "@rtsao/scc@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@rtsao/scc/-/scc-1.1.0.tgz#927dd2fae9bc3361403ac2c7a00c32ddce9ad7e8"

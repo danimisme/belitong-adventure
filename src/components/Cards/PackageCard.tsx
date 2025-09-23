@@ -1,26 +1,18 @@
+import { PackageType } from "@/models/Packages";
 import { Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
-  title: string;
-  description: string;
-  price: number;
-  pricePack: string;
-  duration: number;
-  imgUrl: string;
-  link?: string;
+  data: PackageType;
+  linkTo?: string;
 }
 
 export default function PackageCard({
-  title,
-  description,
-  price,
-  pricePack,
-  duration,
-  imgUrl,
-  link,
+  data,
+  linkTo,
 }: Props) {
+  const { title, subCategory, description, price, pricePack, imgUrl, duration } = data;
   return (
     <div className="border-2 border-primary max-w-sm bg-white  rounded-lg overflow-hidden group hover:shadow-lg hover:-translate-y-2 shadow-primary/50 transition-all duration-300 cursor-pointer">
       <div className="overflow-hidden">
@@ -40,6 +32,7 @@ export default function PackageCard({
             {duration < 24 ? `${duration} Hours` : `${duration / 24} Days`}
           </span>
         </p>
+        <p className="mt-2 text-gray-500">{subCategory}</p>
         <p className="text-gray-600 mt-2">{description}</p>
         <div className="mt-4 flex items-center justify-between">
           <p className="font-semibold">
@@ -49,7 +42,7 @@ export default function PackageCard({
             </span>
           </p>
           <Link
-            href={link ? link : "#"}
+            href={linkTo ? linkTo : "#"}
             className="text-sm font-semibold px-3 py-2 bg-primary border border-primary text-white rounded-lg hover:bg-primary-dark transition-all duration-300 group-hover:bg-white group-hover:text-primary group-hover:border-primary group-hover:shadow-lg group-hover:translate-y-2"
           >
             View Details

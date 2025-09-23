@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Italiana, Judson } from "next/font/google";
 import "./globals.css";
+// Global CSS for AOS animations
+import "@reimujs/aos/dist/aos.css";
 import Navbar from "../components/Layouts/Navbar";
 import Footer from "../components/Layouts/Footer";
 

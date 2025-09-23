@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reimujs/aos": "^0.1.2",
     "@safe-fullpage/react": "^1.0.0",
     "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.13.0",
