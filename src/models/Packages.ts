@@ -15,7 +15,7 @@ export interface PackageType {
   price: number;
   pricePack: "person" | "group" | string;
   imgUrl: string;
-  imgBannerUrl: string;
+  imgBannerUrl?: string;
   imgGalleryUrls: string[];
   duration: string;
   maxGuests: number;

@@ -13,7 +13,6 @@ export const packagesData : PackageType[] = [
   //   price: 50000,
   //   pricePack: "person",
   //   imgUrl: "/assets/images/jage-bumi/jage-bumi-1.png",
-  //   imgBannerUrl: "/assets/images/packages/banner1.jpg",
   //   imgGalleryUrls: [
   //     "/assets/images/packages/gallery1-1.jpg",
   //     "/assets/images/packages/gallery1-2.jpg",
@@ -40,8 +39,7 @@ export const packagesData : PackageType[] = [
     location: "Belitung Island, Indonesia",
     price: 50000,
     pricePack: "person",
-    imgUrl: "/assets/images/jage-bumi/jage-bumi-1.png",
-    imgBannerUrl: "/assets/images/packages/banner1.jpg",
+    imgUrl: "/assets/images/packages/banner1.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery1-1.jpg",
       "/assets/images/packages/gallery1-2.jpg",
@@ -134,7 +132,6 @@ export const packagesData : PackageType[] = [
     price: 100000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-bumi/jage-bumi-2.png",
-    imgBannerUrl: "/assets/images/boat/1.png",
     imgGalleryUrls: [
       "/assets/images/boat/1.png",
       "/assets/images/boat/2.png",
@@ -161,7 +158,6 @@ export const packagesData : PackageType[] = [
     price: 50000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-1.jpg",
-    imgBannerUrl: "/assets/images/packages/banner3.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery3-1.jpg",
       "/assets/images/packages/gallery3-2.jpg",
@@ -188,7 +184,6 @@ export const packagesData : PackageType[] = [
     price: 50000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-2.png",
-    imgBannerUrl: "/assets/images/packages/banner4.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery4-1.jpg",
       "/assets/images/packages/gallery4-2.jpg",
@@ -215,7 +210,6 @@ export const packagesData : PackageType[] = [
     price: 60000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-bumi/jage-bumi-1.png",
-    imgBannerUrl: "/assets/images/packages/banner5.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery5-1.jpg",
     ],
@@ -241,7 +235,6 @@ export const packagesData : PackageType[] = [
     price: 65000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-bumi/jage-bumi-2.png",
-    imgBannerUrl: "/assets/images/packages/banner6.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery6-1.jpg",
     ],
@@ -267,7 +260,6 @@ export const packagesData : PackageType[] = [
     price: 55000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-bumi/jage-bumi-1.png",
-    imgBannerUrl: "/assets/images/packages/banner7.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery7-1.jpg",
     ],
@@ -293,7 +285,6 @@ export const packagesData : PackageType[] = [
     price: 52000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-bumi/jage-bumi-2.png",
-    imgBannerUrl: "/assets/images/packages/banner8.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery8-1.jpg",
     ],
@@ -319,7 +310,6 @@ export const packagesData : PackageType[] = [
     price: 48000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-bumi/jage-bumi-1.png",
-    imgBannerUrl: "/assets/images/packages/banner9.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery9-1.jpg",
     ],
@@ -345,7 +335,6 @@ export const packagesData : PackageType[] = [
     price: 50000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-bumi/jage-bumi-2.png",
-    imgBannerUrl: "/assets/images/packages/banner10.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery10-1.jpg",
     ],
@@ -371,7 +360,6 @@ export const packagesData : PackageType[] = [
     price: 70000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-1.jpg",
-    imgBannerUrl: "/assets/images/packages/banner11.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery11-1.jpg",
     ],
@@ -397,7 +385,6 @@ export const packagesData : PackageType[] = [
     price: 80000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-2.png",
-    imgBannerUrl: "/assets/images/packages/banner12.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery12-1.jpg",
     ],
@@ -423,7 +410,6 @@ export const packagesData : PackageType[] = [
     price: 62000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-1.jpg",
-    imgBannerUrl: "/assets/images/packages/banner13.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery13-1.jpg",
     ],
@@ -449,7 +435,6 @@ export const packagesData : PackageType[] = [
     price: 75000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-2.png",
-    imgBannerUrl: "/assets/images/packages/banner14.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery14-1.jpg",
     ],
@@ -475,7 +460,6 @@ export const packagesData : PackageType[] = [
     price: 58000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-1.jpg",
-    imgBannerUrl: "/assets/images/packages/banner15.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery15-1.jpg",
     ],
@@ -501,7 +485,6 @@ export const packagesData : PackageType[] = [
     price: 54000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-2.png",
-    imgBannerUrl: "/assets/images/packages/banner16.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery16-1.jpg",
     ],
@@ -527,7 +510,6 @@ export const packagesData : PackageType[] = [
     price: 69000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-1.jpg",
-    imgBannerUrl: "/assets/images/packages/banner17.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery17-1.jpg",
     ],
@@ -553,7 +535,6 @@ export const packagesData : PackageType[] = [
     price: 66000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-2.png",
-    imgBannerUrl: "/assets/images/packages/banner18.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery18-1.jpg",
     ],
@@ -579,7 +560,6 @@ export const packagesData : PackageType[] = [
     price: 60000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-1.jpg",
-    imgBannerUrl: "/assets/images/packages/banner19.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery19-1.jpg",
     ],
@@ -605,7 +585,6 @@ export const packagesData : PackageType[] = [
     price: 56000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-2.png",
-    imgBannerUrl: "/assets/images/packages/banner20.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery20-1.jpg",
     ],
@@ -631,7 +610,6 @@ export const packagesData : PackageType[] = [
     price: 72000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-1.jpg",
-    imgBannerUrl: "/assets/images/packages/banner21.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery21-1.jpg",
     ],
@@ -657,7 +635,6 @@ export const packagesData : PackageType[] = [
     price: 79000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-2.png",
-    imgBannerUrl: "/assets/images/packages/banner22.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery22-1.jpg",
     ],
@@ -683,7 +660,6 @@ export const packagesData : PackageType[] = [
     price: 70000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-1.jpg",
-    imgBannerUrl: "/assets/images/packages/banner23.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery23-1.jpg",
     ],
@@ -709,7 +685,6 @@ export const packagesData : PackageType[] = [
     price: 58000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-2.png",
-    imgBannerUrl: "/assets/images/packages/banner24.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery24-1.jpg",
     ],
@@ -735,7 +710,6 @@ export const packagesData : PackageType[] = [
     price: 61000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-1.jpg",
-    imgBannerUrl: "/assets/images/packages/banner25.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery25-1.jpg",
     ],
@@ -761,7 +735,6 @@ export const packagesData : PackageType[] = [
     price: 56000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-2.png",
-    imgBannerUrl: "/assets/images/packages/banner26.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery26-1.jpg",
     ],
@@ -787,7 +760,6 @@ export const packagesData : PackageType[] = [
     price: 52000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-1.jpg",
-    imgBannerUrl: "/assets/images/packages/banner27.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery27-1.jpg",
     ],
@@ -813,7 +785,6 @@ export const packagesData : PackageType[] = [
     price: 68000,
     pricePack: "person",
     imgUrl: "/assets/images/jage-laut/jage-laut-2.png",
-    imgBannerUrl: "/assets/images/packages/banner28.jpg",
     imgGalleryUrls: [
       "/assets/images/packages/gallery28-1.jpg",
     ],

@@ -38,8 +38,8 @@ export default async function Page({
         />
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container relative z-10 h-full w-full text-white py-4 flex flex-col gap-1">
-          <div className="bg-primary px-4 py-[2px] my-2 md:my-4 flex w-fit rounded-2xl font-bold text-sm">
-            {packageData.category}
+          <div className="bg-primary px-4 py-[2px] my-2 md:my-4 flex w-fit rounded-2xl font-bold text-sm capitalize">
+            {packageData.category.toLowerCase().replace(/-/g, " ")}
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium">
             {packageData.title}
