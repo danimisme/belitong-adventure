@@ -3,7 +3,7 @@ import PackageCard from "../Cards/PackageCard";
 import Toggle from "../Input/Toggle";
 import { useEffect, useState } from "react";
 import "./Packages.css";
-import { packages, subCategories } from "@/data/adventure-packages/packages";
+import { packagesData, subCategories } from "@/data/adventure-packages/packages";
 import { PackageType } from "@/models/Packages";
 
 export default function Packages() {
@@ -16,7 +16,7 @@ export default function Packages() {
   const [filteredPackages, setFilteredPackages] = useState<PackageType[]>();
 
   useEffect(() => {
-    let filtered = packages.filter((pkg) => pkg.category === activeCategory);
+    let filtered = packagesData.filter((pkg) => pkg.category === activeCategory);
     if (activeSubCategory) {
       filtered = filtered.filter(
         (pkg) => pkg.subCategory === activeSubCategory
@@ -130,7 +130,7 @@ export default function Packages() {
               data-aos-easing="ease-in-out"
               data-aos-once="true"
             >
-              <PackageCard data={pkg} linkTo={`/package/${pkg.id}`} />
+              <PackageCard data={pkg} linkTo={`/packages/${pkg.slug}`} />
             </div>
           ))}
       </div>

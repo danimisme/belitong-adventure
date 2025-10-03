@@ -15,17 +15,17 @@ const InputField: React.FC<InputFieldProps> = ({ label, type, register, error })
       {type === "textarea" ? (
         <textarea
           rows={5}
-          className={`w-full border rounded px-3 py-2 focus:outline-none ${error ? 'border-red-500 bg-red-100' : 'border-gray-300'}`}
+          className={`w-full border rounded px-3 py-2 focus:outline-none ${error ? 'border-red-400 bg-red-100' : 'border-gray-300'}`}
           {...register}
         ></textarea>
       ) : (
         <input
           type={type}
-          className={`w-full border rounded px-3 py-2 focus:outline-none ${error ? 'border-red-500 bg-red-100' : 'border-gray-300'}`}
+          className={`w-full border rounded px-3 py-2 focus:outline-none ${error ? 'border-red-400 bg-red-100' : 'border-gray-300'}`}
           {...register}
         />
       )}
-      {error && <span className="text-red-500">{error}</span>}
+      {error && <span className="text-red-500 text-xs">*{error}</span>}
     </div>
   );
 };
